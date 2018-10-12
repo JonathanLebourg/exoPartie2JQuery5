@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 3 JQuery - Partie 2</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="jquery-3.2.1.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="exercice">
+    <h1>Exercice 3 JQuery - Partie 2</h1>
+    <p>Quand un champ a le focus, définir sa bordure à "1px solid green".
+      Quand le champ perd le focus, définir la bordure à "1px solid red"..</p>
+  </div>
+
+  <form>
+   <label for="lastName">Nom : </label><input type="text" name="lastName" id="lastName" />
+   <label for="firstName">Prénom : </label><input type="text" name="firstName" id="firstName" />
+   <button type="button" name="button">Envoyer</button>
+  </form>
+
+<script>
+   $("#lastName, #firstName").focusout(function(){
+       $("#lastName, #firstName").css("border","3px solid red");
+   })
+   $("#lastName, #firstName").focusin(function(){
+       $("#lastName, #firstName").css("border","3px solid green");
+   })
+
+</script>
+</body>
+</html>
